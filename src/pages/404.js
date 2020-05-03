@@ -1,7 +1,7 @@
 import React from "react"
 
 const NotFoundPage = () => (
-  <div>404</div>
+  <div>Oops, this page doesn't exist!</div>
 )
 
 export default NotFoundPage
