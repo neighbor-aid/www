@@ -25,7 +25,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop --host neighboraid.dev --https",
+    "develop": "gatsby develop --host neighboraid.local --https",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

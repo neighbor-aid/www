@@ -43,7 +43,7 @@ function SignupForm({ lang = 'en' }) {
     evt.preventDefault()
     setStatus({ submitted: true, response: null, errorMessage: null })
     const body = JSON.stringify({
-      api_key: process.env.CONVERTKIT_PUBLIC_KEY,
+      api_key: process.env.GATSBY_CONVERTKIT_PUBLIC_KEY,
       email,
       fields: {
         lang
