@@ -23,9 +23,9 @@ const IndexPage = () => {
         ante los problemas financiales.
       </h2>
       <p>
-        Estamos construyendo una app en la web sin fines de lucro para hacerlo
+        Neighbor Aid es una app en la web sin fines de lucro que les hace
         más fácil a los miembros de una comunidad estar unidos y ayudarse entre
-        sí en tiempos de necesidad.
+        sí con dinero en tiempos de necesidad.
       </p>
       <p>
         Para aprender más, y recibir noticias cuando lanzamos, registra tu

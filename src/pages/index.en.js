@@ -19,15 +19,15 @@ const IndexPage = () => {
         of financial crisis.
       </h2>
       <p>
-        We're building a not-for-profit web app to make it easy for community
-        members to stand in solidarity and help one another in times of need.
+        Neighbor Aid is a not-for-profit web app that makes it easy for community
+        members to stand in solidarity and financially support one another in times of need.
       </p>
       <p>
         To learn more, and be notified when we launch, submit your email below.
       </p>
       <SignupForm />
       <p className={styles.interested}>
-        Interested in helping out with the project?{" "}
+        Interested in getting involved with the project?{" "}
         <a href="mailto:hello@neighboraid.co">Let us know!</a>
       </p>
     </div>
