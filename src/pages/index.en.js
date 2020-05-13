@@ -19,8 +19,9 @@ const IndexPage = () => {
         of financial crisis.
       </h2>
       <p>
-        Neighbor Aid is a not-for-profit web app that makes it easy for community
-        members to stand in solidarity and financially support one another in times of need.
+        Neighbor Aid is a not-for-profit web app that makes it easy for
+        community members to stand in solidarity and financially support one
+        another in times of need.
       </p>
       <p>
         To learn more, and be notified when we launch, submit your email below.
