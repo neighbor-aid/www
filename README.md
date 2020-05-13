@@ -51,4 +51,3 @@ To have your code merged into master, push your feature branch up to origin and 
 ## Production
 
 This project is hosted on [Netlify](https://www.netlify.com/). Any commits pushed to origin master trigger a Netlify build. If this build succeeds, the new updates are live.
-
