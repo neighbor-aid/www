@@ -18,11 +18,24 @@ const IndexPage = () => {
           Prefer English?
         </Link>
       </h1>
-      <h2>Nuestra misión: ayudar las comunidades locales a redistribuir dinero ante los problemas financiales.</h2>
-      <p>Estamos construyendo una app en la web sin fines de lucro para hacerlo más fácil a los miembros de una comunidad estar unidos y ayudarse entre sí en tiempos de necesidad.</p>
-      <p>Para aprender más, y recibir noticias cuando lanzamos, registra tu correo electrónico abajo.</p>
+      <h2>
+        Nuestra misión: ayudar las comunidades locales a redistribuir dinero
+        ante los problemas financiales.
+      </h2>
+      <p>
+        Estamos construyendo una app en la web sin fines de lucro para hacerlo
+        más fácil a los miembros de una comunidad estar unidos y ayudarse entre
+        sí en tiempos de necesidad.
+      </p>
+      <p>
+        Para aprender más, y recibir noticias cuando lanzamos, registra tu
+        correo electrónico abajo.
+      </p>
       <SignupForm lang="es" />
-      <p className={styles.interested}>¿Quiere ayudar con este proyecto? <a href="mailto:hello@neighboraid.co">¡Déjanos saber!</a></p>
+      <p className={styles.interested}>
+        ¿Quiere ayudar con este proyecto?{" "}
+        <a href="mailto:hello@neighboraid.co">¡Déjanos saber!</a>
+      </p>
     </div>
   )
 }

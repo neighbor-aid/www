@@ -3,5 +3,5 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-import './src/normalize.css'
-import './src/global.css'
+import "./src/normalize.css"
+import "./src/global.css"

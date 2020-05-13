@@ -1,44 +1,46 @@
-import './SignupForm.css'
-import React, { useState } from 'react'
+import "./SignupForm.css"
+import React, { useState } from "react"
 
 const langStrings = {
-  "btnReady": {
-    "en": "Submit",
-    "es": "Enviar"
+  btnReady: {
+    en: "Submit",
+    es: "Enviar",
   },
-  "btnSubmitting": {
-    "en": "Submitting...",
-    "es": "Enviando..."
+  btnSubmitting: {
+    en: "Submitting...",
+    es: "Enviando...",
   },
-  "emailLabel": {
-    "en": "Email",
-    "es": "Correo electrónico"
+  emailLabel: {
+    en: "Email",
+    es: "Correo electrónico",
   },
-  "emailPlaceholder": {
-    "en": "hi@google.com",
-    "es": "hola@google.com"
+  emailPlaceholder: {
+    en: "hi@google.com",
+    es: "hola@google.com",
   },
-  "errorMessage": {
-    "en": "Something went wrong!",
-    "es": "¡Había un error!"
+  errorMessage: {
+    en: "Something went wrong!",
+    es: "¡Había un error!",
   },
-  "success": {
-    "en": "Great! Please check your inbox to confirm your email address!",
-    "es": "¡Bien! Por favor, revisa tu buzón de correo electrónico para confirmar tu correo electrónico."
-  }
+  success: {
+    en: "Great! Please check your inbox to confirm your email address!",
+    es:
+      "¡Bien! Por favor, revisa tu buzón de correo electrónico para confirmar tu correo electrónico.",
+  },
 }
 
-function SignupForm({ lang = 'en' }) {
-  const [ status, setStatus ] = useState({
+function SignupForm({ lang = "en" }) {
+  const [status, setStatus] = useState({
     submitted: false,
     response: null,
     errorMessage: null,
   })
-  const [ email, setEmail ] = useState('')
-  const buttonText = status.submitted && !status.response 
-    ? langStrings["btnSubmitting"][lang]
-    : langStrings["btnReady"][lang]
-  
+  const [email, setEmail] = useState("")
+  const buttonText =
+    status.submitted && !status.response
+      ? langStrings["btnSubmitting"][lang]
+      : langStrings["btnReady"][lang]
+
   async function handleSubmit(evt) {
     evt.preventDefault()
     setStatus({ submitted: true, response: null, errorMessage: null })
@@ -46,26 +48,26 @@ function SignupForm({ lang = 'en' }) {
       api_key: process.env.GATSBY_CONVERTKIT_PUBLIC_KEY,
       email,
       fields: {
-        lang
-      }
+        lang,
+      },
     })
 
     try {
       const response = await fetch(
-        'https://api.convertkit.com/v3/forms/1365805/subscribe',
+        "https://api.convertkit.com/v3/forms/1365805/subscribe",
         {
-          method: 'POST',
+          method: "POST",
           body,
           headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
+            Accept: "application/json",
+            "Content-Type": "application/json",
           },
-        },
+        }
       )
 
       const json = await response.json()
       let status = { submitted: true, response: json, errorMessage: null }
-      let updatedEmail = ''
+      let updatedEmail = ""
 
       if (json.error) {
         const errorMessage = langStrings["errorMessage"][lang]
@@ -82,15 +84,15 @@ function SignupForm({ lang = 'en' }) {
   }
 
   return (
-    <div className='signup-form'>
+    <div className="signup-form">
       {!(status.response && status.response.subscription) && (
         <form onSubmit={handleSubmit}>
-          <div className='form-element'>
+          <div className="form-element">
             <label>
-              <span className='label'>{langStrings["emailLabel"][lang]}</span>
+              <span className="label">{langStrings["emailLabel"][lang]}</span>
               <input
-                type='email'
-                name='email'
+                type="email"
+                name="email"
                 placeholder={langStrings["emailPlaceholder"][lang]}
                 value={email}
                 onChange={evt => setEmail(evt.target.value)}
@@ -98,14 +100,17 @@ function SignupForm({ lang = 'en' }) {
               />
             </label>
           </div>
-          <button type='submit' disabled={(status.submitted && !status.response) || !email}>{buttonText}</button>
+          <button
+            type="submit"
+            disabled={(status.submitted && !status.response) || !email}
+          >
+            {buttonText}
+          </button>
         </form>
       )}
-      {status.errorMessage && (
-        <p className='message'>{status.errorMessage}</p>
-      )}
+      {status.errorMessage && <p className="message">{status.errorMessage}</p>}
       {status.response && status.response.subscription && (
-        <p className='message success'>{langStrings["success"][lang]}</p>
+        <p className="message success">{langStrings["success"][lang]}</p>
       )}
     </div>
   )

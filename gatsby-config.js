@@ -7,12 +7,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-i18n',
-      options: {        
-        langKeyDefault: 'en',
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
         useLangKeyLayout: false,
-        prefixDefault: false
-      }
+        prefixDefault: false,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -23,7 +23,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`
+        icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,
