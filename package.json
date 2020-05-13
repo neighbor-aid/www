@@ -17,12 +17,12 @@
     "react-helmet": "6.0.0"
   },
   "devDependencies": {
+    "husky": "4.2.5",
     "prettier": "2.0.5"
   },
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop --host neighboraid.local --https",
