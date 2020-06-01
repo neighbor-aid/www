@@ -1,6 +1,6 @@
 # Neighbor Aid Website
 
-This is the public-facing website for Neighbor Aid that can be found at https://neighboraid.co. This README explains how to work with this repository.
+This is the public-facing website for Neighbor Aid that can be found at https://neighboraid.co. This README explains how to work with this repository. If interested in making contributions to this code base, please read our [CODE OF CONDUCT](CODE_OF_CONDUCT.md) first.
 
 ## Initial setup
 
@@ -46,7 +46,7 @@ When commiting your code, use the conventions found in the article, ["How to Wri
 
 We follow the [Git Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) convention, which basically means that `master` mimics production, and all work should be done in feature branches off of master.
 
-To have your code merged into master, push your feature branch up to origin and create a PR.
+To have your code merged into master, push your feature branch up to the remote origin and create a PR.
 
 ## Production
 
